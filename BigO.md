@@ -6,8 +6,8 @@
 -   [BigO Notation](#bigo-notation)
 -   [BigO Rules](#bigo-rules)
 
-## Algorithm Performance {#algorithm-performance}
+## Algorithm Performance
 
-## BigO Notation {#bigo-notation}
+## BigO Notation
 
-## BigO Rules {#bigo-rules}
+## BigO Rules
