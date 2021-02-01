@@ -86,6 +86,8 @@ Một số ví dụ khác:
 
 ## BigO Runtime
 
+Phân tích thuật toán cụ thể với `BigO`
+
 ### O(1)
 
 ### O(log(n))
@@ -95,3 +97,34 @@ Một số ví dụ khác:
 ### O(n\*log(n))
 
 ### O(n<sup>2</sup>)
+
+## Time and Space
+
+`BigO` không chỉ được sử dụng để mô tả tốc độ, hay thời gian chạy của một thuật toán _(độ phức tạp thời gian)_, mà còn được sử dụng để mô tả không gian bộ nhớ _(độ phức tạp về bộ nhớ)_ của thuật toán
+
+Độ phức về không gian tập trung vào phần bộ nhớ phụ trợ (cần thêm), không tính bộ nhớ dành cho chính tập dữ liệu đầu vào.
+
+Ví dụ nhỏ xíu:
+
+```python
+def sum(list):
+    total = 0
+    for i in list:
+        total += i
+    return total
+```
+
+Bất kể số lượng phần tử trong `list` là bao nhiêu, thuật toán trên cũng chỉ yêu cầu thêm 1 _đơn vị bộ nhớ_ dành cho biến `total`, vậy, _độ phức tạp không gian_ là `O(1)`
+
+Ví dụ khác mới làm chiều nay:
+
+```python
+def remove_falsy(list):
+    result = []
+    for i in list:
+        if not bool(i): # lại còn bool
+            result.append(i)
+    return result
+```
+
+Với `n` phần tử trong `list` đầu vào, thuật toán yêu cầu `n` _đơn vị bộ nhớ_ bổ sung (trong trường hợp xấu nhất), vậy _độ phức tạp không gian_ là `O(n)`
